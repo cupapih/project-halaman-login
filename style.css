@@ -39,17 +39,55 @@ section {
     size: 10%;
     text-align: center;
 }
+/* ...existing code... */
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .gallery img {
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
     width: 350px;
+    max-width: 90vw;
     height: auto;
     margin: 5px;
-  }
-  
+    animation: getar 0.5s infinite;
+    border-radius: 10px;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery img {
+        width: 95vw;
+        max-width: 100%;
+        margin: 5px 0;
+    }
+    section {
+        padding: 10px;
+        font-size: 1em;
+    }
+    nav ol li {
+        display: block;
+        margin: 8px 0;
+    }
+    table {
+        width: 100%;
+    }
+    footer {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
 
 footer {
     background-color: #2f2e2e;
